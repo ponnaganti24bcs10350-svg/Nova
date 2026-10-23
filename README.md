@@ -317,13 +317,13 @@ npm run dev
 ```
 
 Open the local URL printed by Vite.
-### 🔌 Running the MCP Server
+## 🔌 Running and Testing the MCP Server
 
 NOVA includes a dedicated Model Context Protocol (MCP) server that exposes tools for emergency management and household coordination.
 
-#### 1. Start the MCP Server
+### 1. Start the NOVA MCP Server
 
-Open a terminal in VS Code and run:
+Open the project in VS Code and open a terminal:
 
 ```bash
 cd backend
@@ -331,23 +331,64 @@ npm install
 npm run dev:mcp
 ```
 
-This starts the MCP server in development mode using `tsx watch mcp.ts`. The server automatically restarts when its source code changes.
+This starts the MCP server in development mode using `tsx watch mcp.ts`.
 
-For production-style execution, run:
+Keep this terminal running while testing the server.
+
+For normal execution without watch mode, use:
 
 ```bash
 npm run start:mcp
 ```
-run : npx @modelcontextprotocol/inspector
-#### 2. Start the API Server (Optional)
 
-To run the backend API separately, open another terminal in VS Code and execute:
+### 2. Launch MCP Inspector
+
+Open a **second terminal** in VS Code and run:
 
 ```bash
-cd backend
-npm run dev:api
+npx @modelcontextprotocol/inspector
 ```
 
+Open the Inspector URL printed in the terminal. MCP Inspector provides an interface for connecting to an MCP server and exploring its available tools.
+
+### 3. Connect to NOVA
+
+1. In MCP Inspector, select the transport supported by the NOVA MCP server.
+2. Enter the MCP server's configured endpoint.
+3. Click **Connect**.
+4. Open the **Tools** section.
+5. List the available tools and execute supported tools to inspect their results.
+
+**Important:** The transport and endpoint must match the implementation in `backend/mcp.ts`. Do not assume the server uses Streamable HTTP or a particular URL without checking the source code.
+
+### 4. Available MCP Tools
+
+NOVA exposes the following tools:
+
+| Tool | Purpose |
+|---|---|
+| `create_emergency` | Creates an emergency event. |
+| `respond_to_emergency` | Records a response to an emergency. |
+| `acknowledge_caregiver` | Acknowledges a caregiver notification. |
+| `coordinate_household_event` | Coordinates household events. |
+
+### 5. Verify the Integration
+
+Verify that:
+
+- The MCP server starts without errors.
+- MCP Inspector connects successfully.
+- The client discovers the available tools.
+- Tool calls return the expected results.
+- Emergency response and escalation workflows behave as expected.
+
+### Troubleshooting
+
+- **Server fails to start:** Check the terminal output and confirm dependencies are installed.
+- **Inspector cannot connect:** Confirm the MCP server is running and verify the configured transport and endpoint.
+- **Tools are missing:** Check the tool registrations in `backend/mcp.ts` and reconnect the Inspector.
+
+**Note:** Starting the server process does not by itself confirm successful MCP connectivity. Verify initialization, tool discovery, and tool execution in MCP Inspector.
 #### 3. Available MCP Tools
 
 NOVA provides the following MCP tools:
