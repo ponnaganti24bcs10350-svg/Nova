@@ -37,7 +37,6 @@ Built for the **Amazon Developer Hackathon — Alexa+ Track**, NOVA brings toget
 | 🌐 Live application | [Open NOVA](https://nova-7ujl.vercel.app) |
 | ⚙️ Backend | [NOVA API](https://nova-1-q4n0.onrender.com) |
 | 💻 Source code | [GitHub Repository](https://github.com/ponnaganti24bcs10350-svg/Nova) |
-| 🎬 Demo video | Add the final public video URL |
 
 ## 🎯 The Problem
 
