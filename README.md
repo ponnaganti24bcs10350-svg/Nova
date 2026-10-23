@@ -317,7 +317,51 @@ npm run dev
 ```
 
 Open the local URL printed by Vite.
+### 🔌 Running the MCP Server
 
+NOVA includes a dedicated Model Context Protocol (MCP) server that exposes tools for emergency management and household coordination.
+
+#### 1. Start the MCP Server
+
+Open a terminal in VS Code and run:
+
+```bash
+cd backend
+npm install
+npm run dev:mcp
+```
+
+This starts the MCP server in development mode using `tsx watch mcp.ts`. The server automatically restarts when its source code changes.
+
+For production-style execution, run:
+
+```bash
+npm run start:mcp
+```
+
+#### 2. Start the API Server (Optional)
+
+To run the backend API separately, open another terminal in VS Code and execute:
+
+```bash
+cd backend
+npm run dev:api
+```
+
+#### 3. Available MCP Tools
+
+NOVA provides the following MCP tools:
+
+- `create_emergency` — Create an emergency event.
+- `respond_to_emergency` — Record a response to an emergency.
+- `acknowledge_caregiver` — Acknowledge a caregiver notification.
+- `coordinate_household_event` — Coordinate household events and resolve conflicts.
+
+#### 4. Verify the MCP Server
+
+After starting the server, verify that it initializes successfully and that an MCP-compatible client can connect, discover the available tools using `tools/list`, and execute them using `tools/call`.
+
+**Note:** Configure the MCP client with the actual transport and endpoint implemented in `backend/mcp.ts`. Starting the process alone does not confirm that the server is reachable or MCP-compatible.
 ### 6. Test the integration
 
 Use the actual endpoint paths, MCP transport, and tool schemas defined in the repository. A running HTTP API does not by itself prove that an MCP server is compliant with the required protocol.
