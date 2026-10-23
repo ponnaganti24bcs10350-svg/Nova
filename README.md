@@ -338,7 +338,7 @@ For production-style execution, run:
 ```bash
 npm run start:mcp
 ```
-
+run : npx @modelcontextprotocol/inspector
 #### 2. Start the API Server (Optional)
 
 To run the backend API separately, open another terminal in VS Code and execute:
