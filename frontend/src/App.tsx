@@ -129,9 +129,22 @@ function speakText(text: string) {
   }
 
   window.speechSynthesis.cancel();
-  const utterance = new SpeechSynthesisUtterance(text);
-  utterance.rate = 0.95;
-  utterance.pitch = 1;
+
+const utterance = new SpeechSynthesisUtterance(text);
+const voices = window.speechSynthesis.getVoices();
+
+const preferredVoice =
+  voices.find((voice) => voice.name === "Google US English") ??
+  voices.find((voice) => voice.lang === "en-IN") ??
+  voices.find((voice) => voice.lang === "en-US");
+
+if (preferredVoice) {
+  utterance.voice = preferredVoice;
+}
+
+utterance.lang = "en-US";
+utterance.rate = 0.95;
+utterance.pitch = 1;
   utterance.onend = () => {
     if (voiceModeRef.current) {
       if (conversationTimeoutRef.current !== null) window.clearTimeout(conversationTimeoutRef.current);
