@@ -55,7 +55,7 @@ export function evaluateHouseholdEvent(
 ): CoordinationDecision {
   const context = event.context ?? {};
 
-  // Safety emergencies always take priority over normal household events.
+
   if (isSafetyEmergency(event)) {
     return {
       eventId: event.id,
@@ -165,7 +165,7 @@ export function evaluateHouseholdEvent(
       };
 
     case "SAFETY_EMERGENCY":
-      // Safety emergencies are handled by the priority check above.
+      
       return {
         eventId: event.id,
         decision: "SAFETY_ALERT",

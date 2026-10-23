@@ -118,7 +118,7 @@ const SYSTEM_PROMPT = [
   "Before executing a consequential household action that was only discussed hypothetically, ask for confirmation. If the user clearly confirms a proposed action, use the appropriate tool if one exists.",
 ].join(" ");
 
-// In-memory conversation store for this local prototype. Conversations reset when the API server restarts.
+
 const conversations = new Map<string, ChatMessage[]>();
 const MAX_HISTORY_MESSAGES = 40;
 
@@ -195,7 +195,7 @@ export function registerAssistantRoutes(app: Express) {
 
         if (toolCalls.length === 0) {
           const reply = assistantMessage.content ?? "I couldn't generate a response. Please try again.";
-          // Save the conversation without the system prompt. Keep recent turns for context.
+         
           conversations.set(conversationId, messages.filter((item) => item.role !== "system").slice(-MAX_HISTORY_MESSAGES));
           res.json({ reply, conversationId });
           return;

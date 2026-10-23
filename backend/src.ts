@@ -1,7 +1,7 @@
 
 
 import express from "express";
-import { registerAssistantRoutes } from "./assistant.js";
+import { registerAssistantRoutes } from "./assistant.ts";
 import {
   evaluateHouseholdEvent,
   type HouseholdEvent,
@@ -24,14 +24,20 @@ const RESPONSE_TIMEOUT_MS = 60_000;
 const CAREGIVER_TIMEOUT_MS = 60_000;
 
 app.use(express.json());
+
 app.use((req, res, next) => {
-  res.header(
-    "Access-Control-Allow-Origin",
-    req.headers.origin === "http://localhost:5173" ||
-      req.headers.origin === "http://127.0.0.1:5173"
-      ? req.headers.origin
-      : "http://localhost:5173"
-  );
+  const origin = req.headers.origin;
+
+  const allowedOrigins = [
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+    "http://localhost:5175",
+    "http://127.0.0.1:5175",
+  ];
+
+  if (origin && allowedOrigins.includes(origin)) {
+    res.header("Access-Control-Allow-Origin", origin);
+  }
 
   res.header(
     "Access-Control-Allow-Methods",
@@ -44,12 +50,12 @@ app.use((req, res, next) => {
   );
 
   if (req.method === "OPTIONS") {
-    res.sendStatus(204);
-    return;
+    return res.sendStatus(204);
   }
 
   next();
 });
+
 registerAssistantRoutes(app);
 
 
@@ -114,11 +120,6 @@ function addTimeline(emergency: Emergency, message: string) {
   emergency.timeline.push(message);
 }
 
-/**
- * Send a normal WhatsApp text body using the sendWhatsApp(to, message) helper.
- * This deliberately does not pass an incident ID as the message body or assume
- * that an unapproved WhatsApp template is available.
- */
 async function sendCaregiverWhatsApp(
   emergency: Emergency,
   caregiver: "PRIMARY" | "BACKUP",
@@ -206,22 +207,22 @@ function notifyPrimary(emergency: Emergency) {
   addTimeline(emergency, "Primary caregiver notification requested.");
   console.log(`Primary caregiver alert: ${emergency.id}`);
 
-  // Send the full alert text without blocking the emergency timeout.
+  
   void sendCaregiverWhatsApp(
     emergency,
     "PRIMARY",
    caregiverSettings.PRIMARY.phone,
-    `AEGIS EMERGENCY ALERT\n\nIncident ID: ${emergency.id}\nStatus: ${emergency.status}\n\nA possible emergency needs attention. Please check on the person and acknowledge the alert through the AEGIS caregiver workflow.`
+    `Nova EMERGENCY ALERT\n\nIncident ID: ${emergency.id}\nStatus: ${emergency.status}\n\nA possible emergency needs attention. Please check on the person and acknowledge the alert through the Nova caregiver workflow.`
   );
 
 void sendCaregiverEmailAlert(
   emergency,
   "PRIMARY",
-  "AEGIS Emergency Alert — Primary Caregiver",
+  "Nova Emergency Alert — Primary Caregiver",
   `Incident ID: ${emergency.id}
 Status: ${emergency.status}
 
-A possible emergency needs attention. Please check on the person and acknowledge the alert through the AEGIS caregiver workflow.`
+A possible emergency needs attention. Please check on the person and acknowledge the alert through the Nova caregiver workflow.`
 );
 
   const timer = setTimeout(() => {
@@ -269,17 +270,17 @@ function notifyBackup(emergency: Emergency) {
     emergency,
     "BACKUP",
    caregiverSettings.BACKUP.phone,
-    `AEGIS URGENT ALERT\n\nIncident ID: ${emergency.id}\nStatus: ${emergency.status}\n\nThe primary caregiver did not acknowledge the emergency. Please check on the person and acknowledge the alert through the AEGIS caregiver workflow.`
+    `Nova URGENT ALERT\n\nIncident ID: ${emergency.id}\nStatus: ${emergency.status}\n\nThe primary caregiver did not acknowledge the emergency. Please check on the person and acknowledge the alert through the Nova caregiver workflow.`
   );
 
 void sendCaregiverEmailAlert(
   emergency,
   "BACKUP",
-  "AEGIS Urgent Alert — Backup Caregiver",
+  "Nova Urgent Alert — Backup Caregiver",
   `Incident ID: ${emergency.id}
 Status: ${emergency.status}
 
-The primary caregiver did not acknowledge the emergency. Please check on the person and acknowledge the alert through the AEGIS caregiver workflow.`
+The primary caregiver did not acknowledge the emergency. Please check on the person and acknowledge the alert through the Nova caregiver workflow.`
 );
 
   const timer = setTimeout(() => {
@@ -335,7 +336,7 @@ function escalateEmergency(emergency: Emergency) {
 }
 
 app.get("/", (_req, res) => {
-  res.json({ name: "AEGIS - Adaptive Guardian", status: "running" });
+  res.json({ name: "Nova - Adaptive Guardian", status: "running" });
 });
 
 app.get("/health", (_req, res) => {
@@ -620,8 +621,8 @@ app.post("/test-email", async (_req, res) => {
 
   const result = await sendCaregiverEmail(
     "PRIMARY",
-    "AEGIS Test Email",
-    "This is a test email from AEGIS. No emergency has been detected.",
+    "Nova Test Email",
+    "This is a test email from Nova. No emergency has been detected.",
     recipient
   );
 
@@ -646,7 +647,7 @@ app.post("/test-whatsapp", async (_req, res) => {
   try {
     const result = await sendWhatsApp(
       process.env.PRIMARY_CAREGIVER_WHATSAPP,
-      "AEGIS TEST ALERT\n\nThis is a test message from the AEGIS backend. No emergency has been detected."
+      "Nova TEST ALERT\n\nThis is a test message from the Nova backend. No emergency has been detected."
     );
 
     if (!result.sent) {
@@ -668,5 +669,5 @@ app.post("/test-whatsapp", async (_req, res) => {
   }
 });
 app.listen(PORT, () => {
-  console.log(`AEGIS backend running at http://localhost:${PORT}`);
+  console.log(`Nova backend running at http://localhost:${PORT}`);
 });

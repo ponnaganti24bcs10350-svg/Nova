@@ -1,5 +1,4 @@
 
-/* AEGIS Dashboard — unified dark theme */
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
@@ -442,7 +441,6 @@ select:focus-visible {
   line-height: 1.6;
 }
 
-/* AEGIS Assistant */
 
 .assistant-panel {
   margin-top: 28px;
@@ -526,7 +524,6 @@ select:focus-visible {
   overflow-wrap: anywhere;
 }
 
-/* Household coordination forms */
 
 input,
 select,
@@ -653,7 +650,6 @@ footer {
   }
 }
 
-/* Household Coordination panel */
 .household-panel {
   margin-top: 28px;
   padding: 24px;
@@ -805,9 +801,6 @@ footer {
   margin: 8px 0 16px;
 }
 
-/* ===================================
-   AEGIS — CREAM & ORANGE EDITION
-   =================================== */
 
 :root {
   --bg: #faf6ef;
@@ -827,7 +820,7 @@ body {
   color: #29251f;
 }
 
-/* Header */
+
 .topbar {
   border-bottom-color: #e8ddcf;
 }
@@ -864,7 +857,6 @@ body {
   box-shadow: 0 0 10px #21845f35;
 }
 
-/* Hero */
 .eyebrow {
   color: #d95a27;
 }
@@ -888,7 +880,6 @@ body {
   background: #d95a27;
 }
 
-/* Main cards */
 .stat-card,
 .incident-card,
 .household-panel,
@@ -914,7 +905,6 @@ body {
   color: #29251f;
 }
 
-/* Nova assistant */
 .assistant-panel {
   background:
     radial-gradient(ellipse at top right, #fce8d9, transparent 55%),
@@ -972,7 +962,6 @@ select:focus {
   background: #d95a27;
 }
 
-/* AI response */
 .assistant-reply {
   background: #fffaf4;
   border: 1px solid #ead7c5;
@@ -1051,7 +1040,6 @@ select:focus {
   color: #39332c;
 }
 
-/* Incident statuses */
 .status-awaiting_response {
   background: #fff2d4;
   color: #98610a;
@@ -1124,7 +1112,6 @@ select:focus {
   color: #50483f;
 }
 
-/* Household history */
 .household-event {
   background: #fffaf4;
   border: 1px solid #eadfd1;
@@ -1135,7 +1122,6 @@ select:focus {
   color: #c95022;
 }
 
-/* Empty state and footer */
 .empty-state {
   background: #fffdf9;
   border-color: #e5d6c5;
@@ -1154,7 +1140,6 @@ footer {
   border-top-color: #e8ddcf;
 }
 
-/* Responsive controls */
 @media (max-width: 600px) {
   .household-panel,
   .assistant-panel {
@@ -1168,7 +1153,7 @@ footer {
   }
 }
 
-/* ===== AEGIS: Refined Cream + Orange UI ===== */
+
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
 
@@ -1249,7 +1234,6 @@ h1, h2, h3, h4, .brand h1 {
   color: #797166;
 }
 
-/* More consistent card surfaces */
 .household-panel,
 .assistant-panel,
 .stat-card,
@@ -1280,7 +1264,6 @@ h1, h2, h3, h4, .brand h1 {
   line-height: 1.8;
 }
 
-/* Caregiver form: clearer spacing and grouping */
 .household-panel form {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1340,7 +1323,6 @@ h1, h2, h3, h4, .brand h1 {
   margin-top: 8px;
 }
 
-/* Buttons */
 button {
   font-family: 'DM Sans', sans-serif;
   font-weight: 700;
@@ -1366,7 +1348,6 @@ button {
   transform: translateY(-1px);
 }
 
-/* Inputs throughout the app */
 input:not([type="checkbox"]):not([type="radio"]),
 select,
 textarea {
@@ -1383,7 +1364,6 @@ textarea::placeholder {
   color: #a49a8e;
 }
 
-/* Statistics */
 .stats {
   gap: 16px;
 }
@@ -1412,7 +1392,6 @@ textarea::placeholder {
   font-weight: 800;
 }
 
-/* Nova and response content */
 .assistant-panel {
   background:
     radial-gradient(ellipse at top right, #fbe7d9, transparent 50%),
@@ -1470,7 +1449,7 @@ textarea::placeholder {
   color: #a34420;
 }
 
-/* Incident statuses */
+
 .status-awaiting_response {
   background: #fff2d4;
   color: #98610a;
@@ -1493,7 +1472,7 @@ textarea::placeholder {
   color: #315c9d;
 }
 
-/* Responsive layout */
+
 @media (max-width: 640px) {
   .app-shell {
     padding: 18px 14px;

@@ -158,7 +158,7 @@ function startRecognition() {
     return;
   }
   if (recognitionRef.current) {
-    try { recognitionRef.current.stop(); } catch { /* recognition may already be stopped */ }
+    try { recognitionRef.current.stop(); } catch {  }
   }
 
   const recognition = new SpeechRecognition();
@@ -174,7 +174,7 @@ function startRecognition() {
     let spokenText = transcript;
     const normalized = transcript.toLowerCase().replace(/[.!?,]/g, "").trim();
    
-    // Direct safety triggers: work even without the Nova wake phrase.
+   
     const safetyTriggerPattern =
       /\b(?:alexa\s+help|hey\s+nova\s+(?:help|i\s+fell|i(?:'|’)?ve\s+fallen|i\s+have\s+fallen)|i\s+fell|i(?:'|’)?ve\s+fallen|i\s+have\s+fallen|i\s+need\s+emergency\s+help|emergency\s+help)\b/i;
 
@@ -186,7 +186,7 @@ function startRecognition() {
       }
 
       try {
-        // Avoid creating duplicate incidents when one is already awaiting a response.
+      
         const activeEmergency = emergenciesRef.current.find(
           (item) => item.status === "AWAITING_RESPONSE"
         );
@@ -214,7 +214,7 @@ function startRecognition() {
         await loadEmergencies();
 
         const reply =
-          "I heard a possible emergency. Are you okay? AEGIS has started the 60-second verification timer. This is a prototype and does not contact emergency services.";
+          "I heard a possible emergency. Are you okay? Nova has started the 60-second verification timer. This is a prototype and does not contact emergency services.";
 
         setAssistantMessage("");
         setAssistantReply(reply);
@@ -239,7 +239,7 @@ function startRecognition() {
     const wakeWordPattern = /\bhey\s+nova\b/i;
     if (!conversationActiveRef.current) {
       const wakeMatch = wakeWordPattern.exec(transcript);
-      if (!wakeMatch) return; // Ignore speech until the user says the wake phrase.
+      if (!wakeMatch) return; 
       conversationActiveRef.current = true;
       if (conversationTimeoutRef.current !== null) window.clearTimeout(conversationTimeoutRef.current);
       spokenText = transcript.slice(wakeMatch.index + wakeMatch[0].length).replace(/^[\s,.:;!-]+/, "").trim();
@@ -334,7 +334,7 @@ if (["i need help", "help me", "i need assistance"].includes(command)) {
       window.setTimeout(() => startRecognition(), 400);
     }
   };
-  try { recognition.start(); } catch { /* a recognition session may already be starting */ }
+  try { recognition.start(); } catch { }
 }
 
 function toggleVoiceMode() {
@@ -379,7 +379,7 @@ async function sendAssistantMessage(messageOverride?: string) {
     speakText(data.reply);
     await loadHouseholdHistory();
   } catch (err) {
-    const reply = err instanceof Error ? err.message : "Could not connect to the AEGIS assistant.";
+    const reply = err instanceof Error ? err.message : "Could not connect to the Nova assistant.";
     setAssistantReply(reply);
     if (voiceModeRef.current) speakText(reply);
   } finally {
@@ -502,7 +502,7 @@ async function submitHouseholdEvent() {
   void loadEmergencies();
   void loadHouseholdHistory();
 
-  // Load the caregiver contacts currently saved by the backend.
+ 
   void (async () => {
     try {
       const response = await fetch(`${API}/caregiver-settings`);
@@ -536,7 +536,7 @@ async function submitHouseholdEvent() {
     <main className="app-shell">
       <header className="topbar">
         <div className="brand">
-          <div className="brand-mark">A</div>
+          <div className="brand-mark">N</div>
           <div>
             <h1>Nova</h1>
             <p>ADAPTIVE GUARDIAN · HOUSEHOLD SAFETY</p>
@@ -871,7 +871,7 @@ async function submitHouseholdEvent() {
     Confidence: {event.confidence}
   </p>
 )}
-                    <p className="event-id">ID: {event.id}</p>
+                   
                   </div>
                   {event.status === "AWAITING_RESPONSE" && (
                     <div className="action-buttons">
