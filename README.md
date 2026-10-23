@@ -239,34 +239,24 @@ This is a logical overview. The actual runtime request flow depends on the imple
 
 ## 🖼️ Screenshots and Demonstration
 
-The final submission should include real screenshots from the running application.
+1. **NOVA dashboard** 
+<img width="2881" height="1392" alt="image" src="https://github.com/user-attachments/assets/51c4f2ff-5cde-4ee3-8460-96faec904658" />
 
-Recommended screenshots:
-
-1. **NOVA dashboard** — the main application experience.
 2. **AI assistant** — a real interaction with the assistant.
-3. **Household coordination** — an actual event and the resulting coordination output.
-4. **MCP tools** — the real tool list and a successful tool execution in a compatible MCP client.
-5. **Emergency workflow** — the emergency state and escalation behavior.
-6. **Event history** — actual recorded events or state changes.
+  <img width="2896" height="1369" alt="image" src="https://github.com/user-attachments/assets/063d6a01-b0e1-41b1-9fb5-87572551b39f" />
+<img width="2925" height="1408" alt="image" src="https://github.com/user-attachments/assets/a9c7442a-8380-44fa-bbd7-a81c577b7070" />
 
-Use screenshots of the working implementation. Do not present mockups as proof of a completed integration.
+4. **Household coordination** — an actual event and the resulting coordination output.
+   <img width="2925" height="1504" alt="image" src="https://github.com/user-attachments/assets/bab1bbfc-5324-45bd-ad0c-3c8a4c95c6ec" />
 
-## 🎬 Demo Video
+6. **MCP tools** — the real tool list and a successful tool execution in a compatible MCP client.
+   <img width="2528" height="1352" alt="image" src="https://github.com/user-attachments/assets/d52d101d-6273-4a8d-ba7c-ae52ecef6b14" />
+<img width="2208" height="1384" alt="image" src="https://github.com/user-attachments/assets/700739c2-6257-4c5e-8f10-44971d38eaf4" />
+<img width="2541" height="1332" alt="image" src="https://github.com/user-attachments/assets/a97b6bc1-5203-4379-81b0-c277b403bf81" />
 
-**Demo:** [Insert your public YouTube or Vimeo URL]
-
-The demonstration should be under three minutes, in English, and show the most important functionality first.
-
-Suggested order:
-
-- **0:00–0:20** — Introduce NOVA and its broader household coordination vision.
-- **0:20–1:00** — Demonstrate the assistant and household coordination workflow.
-- **1:00–1:40** — Show MCP tool execution and the actual result.
-- **1:40–2:20** — Demonstrate emergency response and caregiver escalation.
-- **2:20–2:50** — Explain the technical implementation and intended impact.
-
-Prioritize working demonstrations over slides and narration.
+8. **Emergency workflow** — the emergency state and escalation behavior.
+   <img width="2880" height="1485" alt="image" src="https://github.com/user-attachments/assets/5f56f3dc-c3b0-452e-8b9f-5dfa0672264b" />
+<img width="2244" height="484" alt="image" src="https://github.com/user-attachments/assets/0b9a573f-296b-4cfd-8a7f-c54da606a69e" />
 
 ## 💻 Run Locally
 
