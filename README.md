@@ -303,7 +303,7 @@ NOVA is a prototype: simulated emergency scenarios do not establish real-world f
 | 🖥️ Live Frontend | [Open NOVA](https://nova-7ujl.vercel.app) |
 | ⚙️ Backend | [NOVA Backend](https://nova-1-q4n0.onrender.com) |
 | 💻 GitHub Repository | [View Source Code](https://github.com/ponnaganti24bcs10350-svg/Nova) |
-| 🎬 Demo Video | To be added |
+
 
 ---
 
