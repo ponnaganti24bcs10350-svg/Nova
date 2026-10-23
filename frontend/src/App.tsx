@@ -68,7 +68,7 @@ type HouseholdHistoryEntry = {
 };
 
 
-const API = "http://localhost:3003";
+const API = "https://nova-1-q4n0.onrender.com";
 
 function App() {
 
