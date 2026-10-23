@@ -1,386 +1,356 @@
-# NOVA — Intelligent Household Coordination Engine
+# 🌌 NOVA — Intelligent Household Coordination Engine
 
-### One intelligent agent. An entire household. Smarter decisions.
+<h3 align="center">🏠 One Intelligent Agent. An Entire Household. Smarter Decisions.</h3>
 
-NOVA is an AI-powered household intelligence and coordination platform designed to help people manage everyday activities, connected-device events, interruptions, competing priorities, and safety situations through a unified, context-aware agent.
+<p align="center">
+  <strong>Context-Aware AI • Household Intelligence • MCP-Powered Coordination</strong>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/AI-Powered-8A2BE2?style=for-the-badge" alt="AI Powered"/>
+  <img src="https://img.shields.io/badge/Platform-Smart_Home-0EA5E9?style=for-the-badge" alt="Smart Home"/>
+  <img src="https://img.shields.io/badge/Protocol-MCP-FF9900?style=for-the-badge" alt="MCP"/>
+  <img src="https://img.shields.io/badge/Hackathon-Alexa%2B-232F3E?style=for-the-badge" alt="Alexa Plus"/>
+</p>
+
+---
+
+## ✨ What Is NOVA?
+
+**NOVA is an AI-powered household intelligence and coordination platform** designed to help manage everyday activities, connected-device events, competing priorities, interruptions, and safety situations through a unified, context-aware agent.
 
 Built for the **Amazon Developer Hackathon — Alexa+ Track**, NOVA explores how AI agents and the Model Context Protocol (MCP) can move beyond executing isolated commands toward coordinating entire household workflows.
 
-Imagine watching a live football match when someone rings the doorbell. Your household assistant should understand that the match matters, recognize the new event, and decide how to notify you without unnecessarily interrupting the experience.
+Imagine watching a live football match when someone rings the doorbell. Your household assistant should understand that the match matters, recognize the new event, and choose an appropriate way to notify you.
 
-Now imagine quiet hours, a device failure, two conflicting household requests, or a potential emergency. Each situation requires a different response.
+Now imagine quiet hours, conflicting household requests, a device failure, or a potential emergency. Each situation requires a different response.
 
-**That's the vision behind NOVA: an intelligent household agent that understands context, prioritizes events, coordinates actions, and adapts its response to the situation.**
+> 💡 **Our vision:** A household agent that understands context, prioritizes events, coordinates actions, and adapts its response to the situation.
 
 ---
 
-## 🌟 The Vision
+## 🎯 The Problem We're Solving
 
 Today's smart-home experiences often revolve around individual commands: turn on a light, announce a notification, or execute an automation.
 
-But a real household is not a collection of independent commands. It is an environment full of overlapping activities, changing priorities, competing requests, and unexpected events.
+But a real household is full of overlapping activities, changing priorities, competing requests, and unexpected events.
 
-NOVA explores a different approach.
+- 🔔 A doorbell rings during an important live match.
+- 🌙 A routine notification arrives during quiet hours.
+- ⚡ Two household requests compete for the same device.
+- 🔌 A smart-home action fails during execution.
+- 🚨 A potential emergency requires a response rather than another passive notification.
 
-Instead of asking only, "What action should I execute?", NOVA asks:
+A system that treats every event independently can create unnecessary interruptions or fail to coordinate competing actions.
 
-- What is happening in the household?
-- What is the person currently doing?
-- How important is this event?
-- Could this action interrupt something more important?
-- Are there conflicting requests?
-- What should happen if an action fails?
-- Does this situation require escalation?
-
-The goal is to make household automation more context-aware, coordinated, and resilient.
-
-## 🧩 The Problem
-
-Consider a few ordinary household situations:
-
-- You're watching an important live match when the doorbell rings.
-- It's late at night, and a routine notification arrives during quiet hours.
-- Two household requests compete for the same device or resource.
-- A smart-home action fails when the system attempts to execute it.
-- An important household event needs attention while a routine activity is underway.
-- A potential emergency requires a response rather than another passive notification.
-
-A simple command-based system may execute each request independently. A more intelligent system needs to understand context, manage competing priorities, choose appropriate actions, and track what happens afterward.
-
-NOVA is designed to explore that coordination layer.
-
-## 💡 The Solution
-
-NOVA brings together an AI assistant, a household coordination engine, structured MCP tools, emergency workflow management, and action execution logic.
-
-The platform is organized around five capabilities:
-
-1. **Understand** — interpret requests and household events.
-2. **Prioritize** — evaluate event context and competing needs.
-3. **Decide** — select an appropriate response according to application logic.
-4. **Act** — execute supported actions through structured tools.
-5. **Verify and recover** — track outcomes and handle configured failures or escalation paths.
-
-Rather than treating every event as an isolated command, NOVA explores how a household agent can coordinate multiple events while keeping safety and user intent in mind.
+**NOVA explores a smarter approach: understand the context, evaluate priorities, coordinate actions, and track outcomes.**
 
 ---
 
-## 🏠 Real-World Use Cases
+## 🚀 Core Capabilities
 
-NOVA is designed to support different household scenarios, not just emergency alerts.
+<table>
+<tr>
+<td width="50%">
 
-### 1. Entertainment-Aware Notifications
+### 🧠 Context-Aware Coordination
 
-**Scenario:** You're watching a live football match, and someone rings the doorbell.
+Evaluate household events and select actions according to context and application-defined policies.
 
-A poorly coordinated system might interrupt the match with a long announcement. NOVA can evaluate the context and choose a less disruptive response, such as a brief notification.
+</td>
+<td width="50%">
 
-The objective is not to ignore the doorbell. It is to communicate the event while respecting the current activity.
+### ⚖️ Intelligent Prioritization
 
-### 2. Quiet-Hours Management
+Distinguish routine events from time-sensitive or safety-related events.
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+### 🔀 Conflict Handling
+
+Identify competing requests and coordinate them according to defined decision logic.
+
+</td>
+<td width="50%">
+
+### 🔄 Action Execution & Recovery
+
+Track action outcomes and handle configured failures or fallback paths.
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+### 🚨 Emergency Management
+
+Track emergency states, process responses, and initiate configured caregiver escalation.
+
+</td>
+<td width="50%">
+
+### 🔌 MCP-Powered Tools
+
+Expose structured application actions through the Model Context Protocol.
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+### 💬 AI Assistant
+
+Interact with NOVA through its conversational assistant and supported voice interface.
+
+</td>
+<td width="50%">
+
+### 📋 Event History
+
+Inspect relevant events and emergency state changes for monitoring and troubleshooting.
+
+</td>
+</tr>
+</table>
+
+---
+
+## 🏡 NOVA in Real Life
+
+### ⚽ 1. Entertainment-Aware Notifications
+
+**Scenario:** You're watching a live football match when the doorbell rings.
+
+Instead of interrupting you with a long announcement, a context-aware household workflow could choose a brief notification.
+
+**Goal:** Keep you informed without unnecessarily disrupting your activity.
+
+### 🌙 2. Quiet-Hours Management
 
 **Scenario:** It's late at night, and a routine household notification arrives.
 
-NOVA can evaluate the event against quiet-hours policies and choose an appropriate notification behavior, where supported.
+NOVA can evaluate the event against configured quiet-hours policies and choose an appropriate notification behavior, where supported.
 
-For example, a routine update might be deferred or delivered quietly, while an urgent safety-related event should receive higher priority.
+Routine updates and urgent safety events should not necessarily receive the same treatment.
 
-### 3. Conflicting Household Requests
+### 🔀 3. Conflicting Household Requests
 
-**Scenario:** Two household requests compete for a shared device or incompatible actions.
+**Scenario:** Two requests compete for a shared device or incompatible actions.
 
-NOVA explores how a coordination engine can evaluate both requests, identify the conflict, and choose an appropriate action according to the defined policies.
+NOVA explores how a coordination engine can identify the conflict, evaluate the applicable policies, and select or recommend a suitable resolution.
 
-Instead of blindly executing both commands, the system can make the conflict explicit and select or recommend a suitable resolution.
+**Goal:** Coordinate actions rather than blindly execute every command.
 
-### 4. Device Failure and Recovery
+### 🔌 4. Device Failure and Recovery
 
 **Scenario:** A household action fails during execution.
 
-NOVA includes an action-execution workflow designed to handle action outcomes and configured failure or fallback behavior.
+NOVA's action-execution workflow can track the result and follow configured failure-handling behavior.
 
-For example, if an attempted action fails, the workflow can record the failure and follow its configured recovery path instead of silently treating the action as successful.
+**Goal:** Make failures visible and support recovery instead of silently treating an unsuccessful action as complete.
 
-Actual recovery behavior depends on the implemented action and its available fallback.
-
-### 5. Emergency Response and Caregiver Coordination
+### 🚨 5. Emergency and Caregiver Coordination
 
 **Scenario:** A possible fall is reported, but the person does not respond.
 
-NOVA can track the emergency, wait for a response, and initiate caregiver escalation when the configured response window expires.
+NOVA can track the emergency, wait for a response, and initiate primary caregiver escalation when the configured response window expires. If the primary caregiver does not acknowledge within the next configured window, the workflow can escalate to a backup caregiver.
 
-If the primary caregiver does not acknowledge within the configured window, the workflow can escalate to a backup caregiver.
+**Goal:** Track the response process instead of treating an alert as the final step.
 
-This is one important use case within NOVA's broader coordination architecture.
+### 🔥 6. Event Prioritization
 
-### 6. Context-Aware Event Prioritization
+**Scenario:** A routine household event and a high-priority safety event happen close together.
 
-**Scenario:** A routine household event and a high-priority safety event occur close together.
+NOVA explores how policy-based coordination can prioritize events according to their context and importance.
 
-NOVA explores how a policy-based decision engine can prioritize the events according to their context and importance, rather than treating every event equally.
-
-The objective is to minimize unnecessary interruptions without suppressing critical events.
-
----
-
-## ⚙️ Core Features
-
-### Context-Aware Household Coordination
-
-Evaluate household events and select actions based on their type, context, priority, and applicable policies.
-
-### Event Prioritization
-
-Distinguish routine events from time-sensitive or safety-related events, enabling more appropriate responses.
-
-### Conflict Handling
-
-Identify competing requests and coordinate them according to the application's decision logic.
-
-### Action Execution and Failure Handling
-
-Execute supported actions, record outcomes, and handle configured failures or fallback paths.
-
-### Emergency Lifecycle Management
-
-Create and track emergency events, process responses, and manage escalation and acknowledgment workflows.
-
-### Primary and Backup Caregiver Escalation
-
-Initiate caregiver escalation after configured response timeouts and record acknowledgments.
-
-### AI-Powered Assistant
-
-NOVA includes a conversational assistant backed by a Groq model integration, allowing users to interact with the application through natural language.
-
-### Voice Interaction
-
-The frontend includes browser-based voice interaction functionality for supported conversational workflows.
-
-### Conversation Context
-
-Conversation memory supports continuity across interactions, subject to the implementation's memory behavior.
-
-### MCP Tool Interface
-
-Expose structured tools so compatible agents and MCP clients can interact with NOVA's application workflows.
-
-### Household Event History
-
-Track relevant events and emergency state changes to make workflows easier to inspect and troubleshoot.
+**Goal:** Minimize unnecessary interruptions without suppressing critical events.
 
 ---
 
 ## 🧠 Why MCP?
 
-The Model Context Protocol provides a structured way for AI applications to discover and invoke tools.
+The **Model Context Protocol (MCP)** provides a structured way for AI applications to discover and invoke tools.
 
 NOVA uses MCP as an interface to application capabilities rather than relying exclusively on free-form text generation.
 
-Its implemented tool names include:
+### 🛠️ Implemented Tool Names
 
-| MCP tool | Purpose |
+| Tool | Purpose |
 |---|---|
-| `create_emergency` | Create an emergency event |
-| `list_emergencies` | Retrieve the available emergency list |
-| `get_emergency` | Retrieve details for a specific emergency |
-| `respond_to_emergency` | Record a response to an emergency |
-| `acknowledge_caregiver` | Record caregiver acknowledgment |
-| `coordinate_household_event` | Coordinate a household event |
+| `create_emergency` | 🚨 Create an emergency event |
+| `list_emergencies` | 📋 Retrieve the available emergency list |
+| `get_emergency` | 🔎 Retrieve details for a specific emergency |
+| `respond_to_emergency` | ✅ Record a person's response |
+| `acknowledge_caregiver` | 👥 Record caregiver acknowledgment |
+| `coordinate_household_event` | 🏠 Coordinate a household event |
 
-These tools expose structured actions for emergency and household workflows.
+These tools provide structured application actions that compatible agents and MCP clients can invoke.
 
-The broader NOVA architecture separates conversational reasoning from application actions, allowing workflows to be managed through explicit backend logic.
-
-**Important:** MCP tool availability does not by itself establish compatibility with every MCP client or Alexa+ runtime. Protocol and target-platform compatibility must be validated against the actual deployment.
+> 🔎 **Protocol note:** Tool availability alone does not prove compatibility with every MCP client or Alexa+ runtime. The actual transport, specification version, and target-platform integration must be validated separately.
 
 ---
 
-## 🏗️ System Architecture
+## 🔄 How NOVA Works
 
 ```text
-                 User / Voice Input
-                         |
-                         v
-                 NOVA AI Assistant
-                  (Groq Integration)
-                         |
-                         v
-               Household Coordination
-                  and Decision Logic
-                         |
-            +------------+------------+
-            |            |            |
-            v            v            v
-        Household     Emergency    Action
-        Events        Lifecycle    Execution
-            |            |            |
-            +------------+------------+
-                         |
-                         v
-                    MCP Server
-                         |
-                         v
-                 Structured MCP Tools
-                         |
-                         v
-             Supported Application Actions
-                         |
-                         v
-             Outcomes / History / Recovery
+       👤 USER / VOICE INPUT
+                 |
+                 v
+         💬 NOVA AI ASSISTANT
+                 |
+                 v
+       🧠 COORDINATION ENGINE
+                 |
+       +---------+---------+
+       |         |         |
+       v         v         v
+    🏠 Events  🚨 Safety  ⚙️ Actions
+       |         |         |
+       +---------+---------+
+                 |
+                 v
+            🔌 MCP SERVER
+                 |
+                 v
+        🛠️ STRUCTURED TOOLS
+                 |
+                 v
+       📊 RESULTS & STATE UPDATES
 ```
 
-This diagram represents the logical architecture. The actual execution path depends on the implemented code and configured integrations.
+The architecture separates conversational interaction from application actions, allowing supported workflows to be managed through explicit backend logic.
+
+### 🚪 Example: A Doorbell During a Match
+
+1. 🔔 **Event received** — A doorbell event enters the coordination workflow.
+2. 🧠 **Context evaluated** — The workflow considers the event type and relevant household context.
+3. ⚖️ **Action selected** — The coordination logic chooses an appropriate response.
+4. ⚙️ **Action executed** — The application attempts the supported notification or coordination action.
+5. 📊 **Outcome handled** — The result can be inspected, with configured failure handling where available.
+
+The same coordination approach can be applied to quiet hours, competing requests, device failures, and safety events, with policies appropriate to each scenario.
 
 ---
 
-## 🔄 Example: A Household Event in NOVA
-
-Consider a doorbell event while someone is watching a live match.
-
-**Step 1 — Event received**
-
-A doorbell event enters the household coordination workflow.
-
-**Step 2 — Context evaluated**
-
-The workflow considers the event type and relevant household context.
-
-**Step 3 — Action selected**
-
-The coordination logic chooses a response intended to minimize unnecessary interruption.
-
-**Step 4 — Action executed**
-
-The application attempts the supported notification or coordination action.
-
-**Step 5 — Outcome handled**
-
-The result can be inspected, and configured failure handling can run if the action does not succeed.
-
-The same general coordination approach can be applied to quiet hours, conflicting requests, device failures, and higher-priority safety events, with policies appropriate to each scenario.
-
----
-
-## 🚨 Example: Emergency Escalation
-
-NOVA also supports a more time-sensitive workflow.
+## 🚨 Emergency Escalation Workflow
 
 ```text
-Possible Emergency
-        |
-        v
-Awaiting Person's Response
-        |
-        +------ Response Received ------> Resolve
-        |
-        +------ No Response ------------> Primary Caregiver
-                                                |
-                                  +-------------+-------------+
-                                  |                           |
-                             Acknowledged                 No Response
-                                  |                           |
-                                  v                           v
-                               Update                   Backup Caregiver
-                               State
+       🚨 POSSIBLE EMERGENCY
+                 |
+                 v
+       ⏳ AWAITING RESPONSE
+                 |
+          +------+------+
+          |             |
+          v             v
+     ✅ Responded    ⏰ Timeout
+          |             |
+          v             v
+       RESOLVED    👥 PRIMARY CAREGIVER
+                        |
+                 +------+------+
+                 |             |
+                 v             v
+            Acknowledged   No Response
+                 |             |
+                 v             v
+             Update State  🆘 BACKUP CAREGIVER
 ```
 
-The escalation sequence uses configured timeouts. It is intended to make the workflow traceable and to reduce the risk of an unanswered alert being mistaken for a resolved emergency.
+The escalation sequence depends on configured response windows and the implemented workflow.
 
-This prototype does not independently establish that a real-world fall has occurred or guarantee that a caregiver receives or responds to a notification.
+NOVA is a prototype: simulated emergency scenarios do not establish real-world fall detection, and notification attempts do not guarantee delivery or caregiver response.
 
 ---
 
-## 🛠️ Technology Stack
+## 🏗️ Technology Stack
 
-| Technology | Purpose |
+<p>
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript"/>
+  <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node.js"/>
+  <img src="https://img.shields.io/badge/Express-000000?style=flat-square&logo=express&logoColor=white" alt="Express"/>
+  <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React"/>
+  <img src="https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white" alt="Vite"/>
+  <img src="https://img.shields.io/badge/MCP-Model_Context_Protocol-FF9900?style=flat-square" alt="MCP"/>
+  <img src="https://img.shields.io/badge/Groq-AI_Assistant-F55036?style=flat-square" alt="Groq"/>
+  <img src="https://img.shields.io/badge/Resend-Email_API-000000?style=flat-square" alt="Resend"/>
+  <img src="https://img.shields.io/badge/Render-Deployment-46E3B7?style=flat-square" alt="Render"/>
+  <img src="https://img.shields.io/badge/Vercel-Deployment-000000?style=flat-square" alt="Vercel"/>
+</p>
+
+| Technology | Role |
 |---|---|
 | TypeScript | Typed application and backend logic |
 | Node.js | Backend runtime |
-| Express | HTTP API and backend endpoints |
-| Model Context Protocol (MCP) | Structured tool interface |
-| React | Frontend application |
+| Express | HTTP API |
+| MCP | Structured tool interface |
+| React | Frontend interface |
 | Vite | Frontend development and build tooling |
 | Groq integration | AI assistant responses |
 | Resend | Email API integration |
-| Render | Backend deployment |
-| Vercel | Frontend deployment |
+| Render | Backend hosting |
+| Vercel | Frontend hosting |
 
 ---
 
-## 📂 Project Structure
+## 🌐 Project Links
 
-```text
-Nova/
-├── backend/
-│   ├── src.ts
-│   ├── assistant.ts
-│   ├── emergency.ts
-│   ├── coordinate.ts
-│   ├── actionExecutor.ts
-│   ├── mcp.ts
-│   ├── email.ts
-│   └── package.json
-│
-├── frontend/
-│   ├── src/
-│   │   ├── App.tsx
-│   │   └── main.tsx
-│   └── package.json
-│
-└── README.md
-```
-
-This is a high-level overview. Refer to the actual repository for the complete file structure.
+| Resource | Link |
+|---|---|
+| 🖥️ Live Frontend | [Open NOVA](https://nova-7ujl.vercel.app) |
+| ⚙️ Backend | [NOVA Backend](https://nova-1-q4n0.onrender.com) |
+| 💻 GitHub Repository | [View Source Code](https://github.com/ponnaganti24bcs10350-svg/Nova) |
+| 🎬 Demo Video | To be added |
 
 ---
 
-## 🌐 Live Project
+## 🎬 Demo Showcase
 
-- **Frontend:** https://nova-7ujl.vercel.app
-- **Backend:** https://nova-1-q4n0.onrender.com
-- **Source code:** https://github.com/ponnaganti24bcs10350-svg/Nova
+The project demonstration should highlight NOVA's broader household intelligence capabilities.
 
-The demonstration should showcase several different NOVA scenarios:
+- 💬 Conversational interaction with the assistant.
+- 🏠 A household event and its coordination decision.
+- ⚖️ An example of prioritization or conflict handling.
+- 🔄 Action execution and failure handling, where supported.
+- 🚨 Emergency creation, response, and caregiver escalation.
+- 🔌 MCP tool execution and resulting application state.
 
-1. Conversational interaction with the NOVA assistant.
-2. A household event and its context-aware coordination decision.
-3. A conflicting request or action failure, where supported.
-4. Emergency creation and response handling.
-5. Primary and backup caregiver escalation.
-6. MCP tool execution and the resulting application state.
-
-The goal is to demonstrate NOVA as a multi-purpose household coordination platform rather than only an emergency notification application.
+**The goal:** Show NOVA as a multi-purpose household coordination platform, not just an emergency notification application.
 
 ---
 
-## 🧪 Testing and Validation
+## 🧪 Testing & Validation
 
-NOVA's backend has been exercised using HTTP requests and simulated workflows, including emergency creation, response handling, caregiver acknowledgment, and household coordination.
+The backend has been exercised using HTTP requests and simulated workflows, including emergency creation, response handling, caregiver acknowledgment, and household coordination.
 
-Important validation scenarios include:
+Important scenarios to validate include:
 
-- Household event coordination.
-- Conflicting-event decision handling.
-- Action failure and configured fallback behavior.
-- Emergency creation and resolution.
-- Timeout-driven caregiver escalation.
-- MCP tool discovery and execution using a compatible client.
-- AI assistant operation with valid provider configuration.
-- Email notification with a permitted sender and recipient.
-- Frontend-to-backend communication in the deployed environment.
+- [ ] Household event coordination.
+- [ ] Conflicting-event decision handling.
+- [ ] Action failure and configured fallback behavior.
+- [ ] Emergency creation and resolution.
+- [ ] Timeout-driven caregiver escalation.
+- [ ] MCP tool discovery and execution with a compatible client.
+- [ ] AI assistant operation with valid provider configuration.
+- [ ] Email notification with valid sender and recipient configuration.
+- [ ] Frontend-to-backend communication in production.
 
-Testing results should be reported according to the behavior reproduced in the final submitted version. Simulated events, provider acceptance, and actual delivery are distinct outcomes.
+Testing results should reflect the final submitted version. Simulated events, provider acceptance, and confirmed message delivery are different outcomes.
 
 ---
 
-## 🔐 Safety and Limitations
+## 🔐 Safety, Privacy & Limitations
 
-NOVA is a prototype for intelligent household coordination. It is not a certified medical device or a replacement for emergency services.
+NOVA is a prototype for intelligent household coordination. It is not a certified medical device and does not replace emergency services or professional care.
 
-Some household events and emergency scenarios may be simulated. Actual smart-device control depends on available integrations, while email and messaging depend on correctly configured external providers.
-
-AI-generated decisions should not be treated as infallible. Safety-critical actions require appropriate safeguards, clear escalation policies, and reliable execution.
+- 🧪 Some household events and emergency scenarios may be simulated.
+- 🔌 Actual smart-device control depends on available integrations.
+- 📧 Email and messaging depend on correctly configured external providers.
+- 🧠 AI-generated decisions are not infallible.
+- 🛡️ Safety-critical actions require appropriate safeguards and reliable execution.
 
 A production-ready system would require stronger authentication and authorization, privacy protections, durable background jobs, verified notification delivery, reliable device integrations, and extensive testing.
 
@@ -388,28 +358,34 @@ A production-ready system would require stronger authentication and authorizatio
 
 ## 🚀 Future Roadmap
 
-- Expand contextual household policies and event prioritization.
-- Integrate additional smart-home devices and event sources.
-- Improve conflict resolution and action recovery.
-- Add durable workflows, retries, and execution monitoring.
-- Improve household event history and observability.
-- Strengthen privacy, permissions, and user-specific preferences.
-- Improve caregiver notification reliability.
-- Validate MCP interoperability and Alexa+ integration end to end.
-- Evaluate real-world usability and reliability across diverse household scenarios.
+- 🧠 Expand contextual household policies and event prioritization.
+- 🏠 Integrate additional smart-home devices and event sources.
+- ⚖️ Improve conflict resolution and action recovery.
+- 🔁 Add durable workflows, retries, and execution monitoring.
+- 📊 Improve event history and observability.
+- 🔐 Strengthen privacy, permissions, and user preferences.
+- 📬 Improve caregiver notification reliability.
+- 🔌 Validate MCP interoperability and Alexa+ integration end to end.
+- 🌍 Evaluate usability and reliability across diverse household scenarios.
 
 ---
 
 ## 🏆 What Makes NOVA Different?
 
-NOVA's central idea is that a smart household needs more than a collection of independent automations.
+NOVA explores a shift from isolated smart-home commands toward **context-aware household coordination**.
 
-It needs a coordination layer that can reason about context, prioritize events, manage competing actions, track outcomes, and escalate when a situation requires additional attention.
+Whether it is a doorbell during a live match, a notification during quiet hours, a conflicting request, a device failure, or an emergency requiring escalation, the underlying challenge is the same:
 
-From a doorbell during a live match to quiet-hours policies, device failures, conflicting requests, and emergency escalation, NOVA explores how a household agent can coordinate different kinds of events through one unified platform.
+**The system must understand what is happening, determine what matters, coordinate an appropriate action, and track what happens next.**
 
-**NOVA is not just about responding to commands. It's about coordinating what happens next.**
+NOVA brings these ideas together in one household intelligence platform.
+
+<p align="center">
+  <strong>🌌 NOVA — Not just responding to commands. Coordinating what happens next. 🏠</strong>
+</p>
 
 ---
 
-**Built for the Amazon Developer Hackathon — Alexa+ Track.**
+<p align="center">
+  Built with ❤️ for the <strong>Amazon Developer Hackathon — Alexa+ Track</strong>
+</p>
