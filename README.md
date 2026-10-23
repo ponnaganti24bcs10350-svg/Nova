@@ -29,6 +29,56 @@ Now imagine quiet hours, conflicting household requests, a device failure, or a 
 
 ---
 
+## 🚀 Setup & Installation
+
+### Prerequisites
+
+Make sure you have the following installed:
+
+- [Node.js](https://nodejs.org/) (LTS version)
+- npm (included with Node.js)
+- Git
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/ponnaganti24bcs10350-svg/Nova
+cd Nova
+```
+
+### 2. Install Dependencies
+
+Install the dependencies for the backend and frontend separately:
+
+```bash
+cd backend
+npm install
+```
+
+In a second terminal:
+
+```bash
+cd frontend
+npm install
+```
+### 3. Start the Application
+
+Start the backend using the development script defined in its `package.json`:
+
+```bash
+cd backend
+npm run dev
+```
+
+Start the frontend in a separate terminal:
+
+```bash
+cd frontend
+npm run dev
+```
+
+Vite typically serves the frontend at `http://localhost:5173`. Use the actual URL printed in your terminal.
+---
 ## 🎯 The Problem We're Solving
 
 Today's smart-home experiences often revolve around individual commands: turn on a light, announce a notification, or execute an automation.
