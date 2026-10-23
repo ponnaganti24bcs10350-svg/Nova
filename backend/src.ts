@@ -24,28 +24,29 @@ const RESPONSE_TIMEOUT_MS = 60_000;
 const CAREGIVER_TIMEOUT_MS = 60_000;
 
 app.use(express.json());
-
 app.use((req, res, next) => {
   const origin = req.headers.origin;
 
   const allowedOrigins = [
-  "http://localhost:5173",
-  "http://127.0.0.1:5173",
-  "http://localhost:5175",
-  "http://127.0.0.1:5175",
-  "https://nova-eight-silk.vercel.app",
-];
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+    "http://localhost:5175",
+    "http://127.0.0.1:5175",
+    "https://nova-eight-silk.vercel.app",
+  ];
+
+  res.vary("Origin");
 
   if (origin && allowedOrigins.includes(origin)) {
-    res.header("Access-Control-Allow-Origin", origin);
+    res.setHeader("Access-Control-Allow-Origin", origin);
   }
 
-  res.header(
+  res.setHeader(
     "Access-Control-Allow-Methods",
     "GET, POST, PUT, PATCH, DELETE, OPTIONS"
   );
 
-  res.header(
+  res.setHeader(
     "Access-Control-Allow-Headers",
     "Content-Type, Authorization"
   );
@@ -56,7 +57,6 @@ app.use((req, res, next) => {
 
   next();
 });
-
 registerAssistantRoutes(app);
 
 
