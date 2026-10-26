@@ -19,7 +19,7 @@ import {
 } from "./emergency.ts";
 
 const app = express();
-const PORT = 3003;
+const PORT = Number(process.env.PORT ?? 3003);
 const RESPONSE_TIMEOUT_MS = 60_000;
 const CAREGIVER_TIMEOUT_MS = 60_000;
 
@@ -671,6 +671,6 @@ app.post("/test-whatsapp", async (_req, res) => {
     return res.status(500).json({ ok: false, error: detail });
   }
 });
-app.listen(PORT, () => {
-  console.log(`Nova backend running at http://localhost:${PORT}`);
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`Nova backend running on port ${PORT}`);
 });
