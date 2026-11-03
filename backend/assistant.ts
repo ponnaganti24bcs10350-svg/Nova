@@ -184,8 +184,7 @@ function getRecentHistory(history: ChatMessage[]): ChatMessage[] {
     .filter((item) => {
       if (item.role === "tool") return false;
 
-      // Do not keep an assistant message whose tool call would be missing
-      // its matching tool result.
+    
       if (item.role === "assistant" && item.tool_calls?.length) {
         return false;
       }
